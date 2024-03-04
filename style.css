@@ -1,9 +1,9 @@
 head, body {
-	background-color: #020202;
+	background-color: #000;
 	margin: 0;
 	font-family: Helvetica;
 	font-weight: 400;
-	color: #fff;
+	color: #EAE0D5;
 	padding: 0;
 	box-sizing: border-box;
 	list-style: none;
@@ -11,6 +11,13 @@ head, body {
 	border: none;
 	outline: none;
 	line-height: 1.5;
+}
+
+.body{
+  background-image: url("bakgrund.jpg"); /*Photo by Juan Davila on Unsplash, https://unsplash.com/photos/lake-under-blue-sky-during-daytime-P8PlK2nGwqA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash*/
+  background-attachment: fixed;
+  background-color: #22333B;
+  background-size: cover;
 }
 
 
@@ -22,26 +29,40 @@ head, body {
 
 /*meny*/
 
-.meny{
-    background-color: #22333B;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-	min-height: 4vw;
+header{
+  max-height: 70px;
 }
 
+.meny{
+  background-color: #22333B;
+  width: 100%;
+  max-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logga{
+  margin-top: 7px;
+	margin-left: 20px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
 
 .knappar{
-    padding-right: 3vw;
+  padding-right: 25px;
 }
 
-a{
-    padding-right: 2vw;
-    padding-left: 2vw;
-    text-decoration: none;
-    font-size: 1.2vw;
-    color: #EAE0D5;
+.meny .knappar a{
+  padding-right: 25px;
+  padding-left: 25px;
+  text-decoration: none;
+  font-size: large;
+  color: #EAE0D5;
+}
+
+.meny .knappar a:hover {
+  color: #C6AC8F;
 }
 
 a:hover {
@@ -78,9 +99,9 @@ a:hover {
 }
 
 .hem-text a{
-width: 100%;
+  width: 100%;
   background-color: #22333B;
-  color: #fff;
+  color: #EAE0D5;
   padding: 1vw 1.5vw;
   margin: 0.8vw 0;
   border: none;
@@ -88,6 +109,7 @@ width: 100%;
   cursor: pointer;
   font-size: 1.2vw;
   margin-left: -5vw;
+  text-decoration: none;
 }
 
 .hem-text a:hover {
@@ -107,7 +129,7 @@ width: 100%;
 .genre p{
 	font-size: 1.3vw;
 	line-height: 0.2vw;
-	color: #fff;
+	color: #EAE0D5;
 	margin-bottom: 3vw;
 	margin-top: 2vw;
 	font-weight: bold;
@@ -117,7 +139,7 @@ width: 100%;
 .time p{
 	font-size: 1.3vw;
 	line-height: 0.2vw;
-	color: #fff;
+	color: #EAE0D5;
 	margin-bottom: 4vw;
 	margin-top: 2vw;
 	margin-left: -5vw;
@@ -140,7 +162,7 @@ width: 100%;
 }
 
 .text-info {
-	color: #fff;
+	color: #EAE0D5;
 }
 
 .text-info h1 {
@@ -172,7 +194,7 @@ width: 100%;
   cursor: pointer;
   width: 100%;
   background-color: #22333B;
-  color: #fff;
+  color: #EAE0D5;
   padding: 0.3vw 0.3vw;
   border: none;
   border-radius: 0.2vw;
@@ -183,6 +205,7 @@ width: 100%;
 .text-info label:hover {
   background-color: #191E26 ;
 }
+
 
 #ch:checked ~ .more{
 	display: block;
@@ -209,6 +232,12 @@ width: 100%;
     height: auto;
 }
 
+.youtube-box iframe{
+	width:62.5vw;
+	height:39.8vw;
+    border: 0;
+}
+
 
 /*fog*/
 
@@ -219,6 +248,14 @@ width: 100%;
 	width: 100%;
 	height: auto;
 }
+
+.fog-container a,
+.fog-container p{
+font-size: 0.5vw;
+color: black;
+}
+
+
 
 
 /*Event start*/
@@ -240,7 +277,7 @@ video {
 .event-content {
     position: relative;
     padding-top: 22vw;
-    color: #fff;
+    color: #EAE0D5;
     text-align: center;
     font-size: 4vw;
 	font-weight: 800;
@@ -536,11 +573,12 @@ border-bottom-width: 0.3vw;
     text-decoration: underline;
 	color: #EAE0D5;
 }
+
 .imagetext:hover{
     color: #C6AC8F;
 }
 
-.galleri img{
+.carousel img{
     max-width: 800px;
     margin: auto;
 }
@@ -549,47 +587,52 @@ border-bottom-width: 0.3vw;
 /*footer*/
 
 .footer{
-	padding: 2.6vw 0;
-	text-align: center;
-	background-color: #22333B;
-	color: #EAE0D5;
-	 position: relative;
+  padding: 2.6vw 0;
+  text-align: center;
+  background-color: #22333B;
+  color: #EAE0D5;
+   position: relative;
+z-index: 1;
 }
 
-.footer .socials{
-	padding-bottom: 1.6vw;
+.socials{
+  padding-bottom: 1vw;
 }
 
-.footer .socials a{
-	width: 2.6vw;
-	height: 2.6vw;	
+.socials a{
+  width: 2.6vw;
+  height: 2.6vw;
+  padding: 1.5vw;
+
 }
 
 .footer ul{
-	margin-top: 0;
-	padding: 0;
-	list-style: none;
-	font-size: 1.2vw;
-	margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.2vw;
+  margin-bottom: 0;
+}
+
+.footer ul li a{
+  color: inherit;
+  text-decoration: none;
 }
 
 .footer ul li{
-	display: inline-block;
-	padding: 0.012vw;
-	}
+  display: inline-block;
+  padding: 1.5vw;
+  }
 
 .footer ul li a:hover{
-	color: #C6AC8F;
-}
-
-.list a{
-	font-size: 1vw;
+  color: #C6AC8F;
 }
 
 .copyright{
-	font-size: 0.8vw;
-	margin-top: 2.9vw;
-	}
+  font-size: 1vw;
+  margin-top: 2vw;
+
+  }
 
 	
 
